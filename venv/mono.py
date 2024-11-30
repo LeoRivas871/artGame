@@ -8,7 +8,7 @@ class Mono(Sprite):
         self.settings = pang.settings
         self.screen_rect = pang.screen.get_rect()
 
-        #Carga la imagen del tirador, lo ajsuta y obtiene su rect.
+        #Carga la imagen del tirador, lo ajsuta y obtiene su rect
         self.image = pygame.image.load('images/art_png.png')
         self.nuevo_ancho = 100
         self.nuevo_alto = 100
