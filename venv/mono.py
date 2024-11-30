@@ -44,17 +44,24 @@ class Mono(Sprite):
         if self.is_jumping:
             self.vertical_speed += self.gravity # Aumentar la velocidad vertical por la gravedad
             self.y += self.vertical_speed #Actualizar la posición vertical.
+            print(f'Salto en progreso. Velocidad vertical: {self.vertical_speed}, Posicion y: {self.y}')
 
             #Si el personaje toca el suelo, detener el salto.
-            if self.rect.bottom >= self.screen_rect.bottom:
+            if self.y >= self.screen_rect.bottom - self.rect.height:
                 self.y = self.screen_rect.bottom - self.rect.height
                 self.is_jumping = False
                 self.vertical_speed = 0
+                print("El personaje ha aterrizado")
 
+        # Asegurarnos de que no haya sido movido fuera de los límites
+        if self.y > self.screen_rect.bottom - self.rect.height:
+            self.y = self.screen_rect.bottom - self.rect.height
 
         #Actualiza las posiciones del rectángulo.
         self.rect.x = self.x
         self.rect.y = self.y
+        #print(f"Posición actual - x: {self.x}, y: {self.y}")
+
 
 
     def center_ship(self):
