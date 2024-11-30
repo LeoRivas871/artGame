@@ -57,7 +57,7 @@ class Pang:
 
 
     def _check_keyup_events(self, event):
-        '''Responde a liberaciones de teclas.'''
+        '''Responde a liberaciones de teclas'''
         if event.key == pygame.K_RIGHT:
             self.mono.moving_right = False
         elif event.key == pygame.K_LEFT:

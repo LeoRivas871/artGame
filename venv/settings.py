@@ -12,7 +12,7 @@ class Settings:
         self.mono_speed = 1.5
         
 
-        #Configuración de disparos del mono.
+        #Configuración de disparos del mono
         self.bullet_width = 30
         self.bullet_height = 15
         self.bullet_color = (60,60,60)
