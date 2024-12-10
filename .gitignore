@@ -1,0 +1,7 @@
+# Ignorar directorios y archivos
+Lib/
+Scripts/
+__pycache__/
+pyvenv.cfg
+alien/
+include/
