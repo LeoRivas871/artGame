@@ -54,6 +54,8 @@ class Pang:
             #Iniciar el salto si no está ya saltando.
             self.mono.is_jumping = True
             self.mono.vertical_speed = self.mono.jump_speed
+        elif event.key == pygame.K_e:
+            self.mono.vertical_speed *= 1.5
         elif event.key == pygame.K_UP:  # Dispara hacia arriba
             self._fire_bullet(0, -1)  # (x_direction, y_direction)
         elif event.key == pygame.K_w and self.mono.moving_right:  # Dispara diagonalmente hacia arriba y a la derecha
