@@ -60,6 +60,8 @@ class Pang:
             self._fire_bullet(1, -1)
         elif event.key == pygame.K_w and self.mono.moving_left:  # Dispara diagonalmente hacia arriba y a la izquierda
             self._fire_bullet(-1, -1)
+        elif event.key == pygame.K_a:
+            self.settings.mono_speed *= 2
         elif event.key == pygame.K_q:
             sys.exit()
 
@@ -70,6 +72,8 @@ class Pang:
             self.mono.moving_right = False
         elif event.key == pygame.K_LEFT:
             self.mono.moving_left = False
+        elif event.key == pygame.K_a:
+            self.settings.mono_speed = 1.5
 
     def _fire_bullet(self, x_direction, y_direction):
         """Crea una nueva bala y la añade al grupo de balas."""
